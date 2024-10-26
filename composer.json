@@ -13,12 +13,12 @@
   "extra": {
     "laravel": {
       "providers": [
-        "DebugServiceProvider"
+        "ANFI\\DebugPackage\\DebugServiceProvider"
       ]
     }
   },
   "require": {
     "php": ">=8.3",
-    "illuminate/support": "^11.0|^9.0|^10.0|^11.0"
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0"
   }
 }
