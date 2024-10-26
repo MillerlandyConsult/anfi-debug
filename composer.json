@@ -7,7 +7,6 @@
       "ANFI\\DebugPackage\\": "src/"
     },
     "files": [
-      "src/DebugHelper.php",
       "src/helpers.php"
     ]
   },
