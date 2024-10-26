@@ -3,6 +3,8 @@
 namespace ANFI\DebugPackage\DebugHelper;
 
 
+use ANFI\DebugPackage\DebugHelper;
+
 /**
  * Provides a debugging function that wraps around the DebugHelper::debug method.
  *
