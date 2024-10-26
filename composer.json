@@ -4,7 +4,7 @@
   "type": "library",
   "autoload": {
     "psr-4": {
-      "AnfiDebug\\": "src/"
+      "ANFI\\DebugPackage\\": "src/"
     },
     "files": [
       "src/DebugHelper.php"
