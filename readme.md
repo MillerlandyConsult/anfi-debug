@@ -1,8 +1,4 @@
-Certainly! Below is the updated `README.md` translated into English, including the usage of the `_debug()` and `_forget()` helper functions.
 
----
-
-```markdown
 # Custom Debugging Package for Laravel Octane
 
 This package provides a custom debugging solution for Laravel applications using Octane, where traditional debugging tools like Xdebug might not be available. It allows developers to cache variables and view them in a modern, user-friendly web interface that updates every 5 seconds.
@@ -65,7 +61,7 @@ No additional configuration is required. The package automatically registers its
 
 ### Cache Variables with `_debug()`
 
-You can use the global `_debug()` function to cache variables for debugging.
+Use the global `_debug()` function to cache variables for debugging.
 
 **Example:**
 
@@ -74,12 +70,12 @@ You can use the global `_debug()` function to cache variables for debugging.
 $key = _debug([
     'variable1' => $value1,
     'variable2' => $value2,
-    // Add as many variables as you need
+    // Add as many variables as needed
 ]);
 ```
 
 - **Parameters:**
-  - `array $variables`: An associative array of variables you want to cache.
+  - `array $variables`: An associative array of variables to cache.
   - `string $key` (optional): A custom key for the cache entry.
 
 - **Returns:**
@@ -93,7 +89,7 @@ $key = _debug($variables, 'my-custom-key');
 
 ### Remove Cached Variables with `_forget()`
 
-To remove the cached variables, you can use the global `_forget()` function.
+To remove cached variables, use the global `_forget()` function.
 
 **Example:**
 
@@ -108,7 +104,7 @@ if ($success) {
 ```
 
 - **Parameters:**
-  - `string $key`: The key of the cached variables you want to remove.
+  - `string $key`: The key of the cached variables to remove.
 
 - **Returns:**
   - `bool`: `true` if the key existed and was removed, `false` otherwise.
@@ -122,11 +118,12 @@ http://your-app-url/debug/{key}
 ```
 
 - Replace `{key}` with the key returned by the `_debug()` function.
-- **Example:**
+  
+**Example:**
 
-  ```
-  http://localhost:8000/debug/debug-614c1b5e5f8b2
-  ```
+```
+http://localhost:8000/debug/debug-614c1b5e5f8b
+```
 
 The interface will display the cached variables and automatically refresh every 5 seconds to reflect any changes.
 
@@ -199,5 +196,3 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 ## Contact
 
 If you have any questions or need support, please open an issue on the [GitHub repository](https://github.com/MillerlandyConsult/anfi-debug).
-
-```
