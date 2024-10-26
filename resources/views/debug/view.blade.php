@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Debug Variables</h1>
         <div id="variables-container">
-            @include('debug.partials.variables', ['variables' => $variables])
+            @include('anfi-debug::debug.partials.variables', ['variables' => $variables])
         </div>
     </div>
 
@@ -20,7 +20,7 @@
                 .then(function (response) {
                     document.getElementById('variables-container').innerHTML = response.data;
                 });
-        }, 5000);
+        }, 2000);
     </script>
 </body>
 </html>

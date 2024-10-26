@@ -16,10 +16,10 @@ class DebugController
         $variables = Cache::get($key, []);
 
         if (request()->ajax()) {
-            return view('debug.partials.variables', compact('variables'))->render();
+            return view('anfi-debug::debug.partials.variables', compact('variables'))->render();
         }
 
-        return view('debug.view', compact('variables', 'key'));
+        return view('anfi-debug::debug.view', compact('variables', 'key'));
     }
 
 
