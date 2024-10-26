@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Debug Variables</title>
-    <link rel="stylesheet" href="{{ asset('css/debug.css') }}">
+    <title>ANFI-Debug Variables</title>
+    <link rel="stylesheet" href="{{ asset('vendor/anfi-debug/css/debug.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>

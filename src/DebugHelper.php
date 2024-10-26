@@ -24,6 +24,12 @@ class DebugHelper
         return $key;
     }
 
+    /**
+     * Removes the cache entry associated with the specified key.
+     *
+     * @param string|null $key The key of the cache entry to remove. If null, no operation will be performed.
+     * @return void
+     */
     public static function remove(string $key = null): void
     {
         Cache::forget($key);
