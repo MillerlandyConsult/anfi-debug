@@ -8,6 +8,7 @@ class DebugHelper
 {
     const string CACHE_KEY = 'debug-';
     const int CACHE_TIME = 10;
+
     /**
      * Stores the given array of variables in the cache with a unique key.
      *
@@ -21,5 +22,10 @@ class DebugHelper
         Cache::put($key, $variables, now()->addMinutes(self::CACHE_TIME)); // Adjust expiration time as needed
 
         return $key;
+    }
+
+    public static function remove(string $key = null): void
+    {
+        Cache::forget($key);
     }
 }
