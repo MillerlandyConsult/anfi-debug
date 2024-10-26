@@ -1,0 +1,24 @@
+{
+  "name": "MillerlandyConsult/anfi-debug",
+  "description": "A Laravel package for caching and viewing debug variables in Octane apps.",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "AnfiDebug\\": "src/"
+    },
+    "files": [
+      "src/DebugHelper.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DebugServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": ">=8.3",
+    "illuminate/support": "^11.0|^9.0|^10.0|^11.0"
+  }
+}
