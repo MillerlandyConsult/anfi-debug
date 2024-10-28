@@ -9,11 +9,6 @@
 <body>
 <div class="container">
     <h1>Debug Variables</h1>
-    <div class="input-container">
-        <label for="key-input">Enter Key(s) (comma separated):</label>
-        <input type="text" id="key-input" value="{{ $keys }}">
-        <button onclick="fetchVariables()">Fetch Variables</button>
-    </div>
     <div id="variables-container">
         @include('anfi-debug::debug.partials.variables', ['variables' => $variables])
     </div>
@@ -33,41 +28,18 @@
         border-radius: 8px;
     }
 
-    .input-container {
+    .variable {
         margin-bottom: 20px;
     }
 
-    .key-container {
-        margin-bottom: 30px;
-        padding: 15px;
-        background-color: #0062cc;
-        color: #fff;
-        border-radius: 6px;
-    }
-
-    .key-container h2 {
-        margin: 0;
-        font-size: 1.5em;
-        text-transform: uppercase;
-    }
-
-    .variable-container {
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: #f8f9fa;
-        border: 1px solid #dee2e6;
-        border-radius: 6px;
-    }
-
-    .variable-container h3 {
-        background-color: #007bff;
+    .variable h2 {
+        background-color: #007BFF;
         color: #fff;
         padding: 10px;
         border-radius: 4px;
-        margin-bottom: 10px;
     }
 
-    .variable-container pre {
+    .variable pre {
         background-color: #e9ecef;
         padding: 15px;
         border-radius: 4px;
@@ -75,17 +47,17 @@
     }
 </style>
 <script>
-    function fetchVariables() {
-        const keys = document.getElementById('key-input').value;
-        axios.get('{{ url("/debug") }}', {
-            params: {
-                keys: keys
+    setInterval(function () {
+        axios.get('{{ url("/debug/{$key}") }}', {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
             }
         })
             .then(function (response) {
+                console.log(response.data);
                 document.getElementById('variables-container').innerHTML = response.data;
             });
-    }
+    }, 2000);
 </script>
 </body>
 </html>
