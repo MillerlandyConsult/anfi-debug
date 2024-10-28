@@ -18,7 +18,7 @@ class DebugHelper
      */
     public static function debug(array $variables, string $key = null): string
     {
-        $key = $key ?? self::CACHE_KEY . uniqid();
+        $key = self::CACHE_KEY . "{$key}";
         $existingData = Cache::get($key, []);
         $mergedData = array_merge($existingData, $variables);
         Cache::put($key, $mergedData, now()->addMinutes(self::CACHE_TIME)); // Adjust expiration time as needed

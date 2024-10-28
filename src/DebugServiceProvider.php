@@ -15,9 +15,9 @@ class DebugServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'anfi-debug');
 
-        $this->publishes([
-            __DIR__.'/../public/css' => public_path('vendor/anfi-debug/css'),
-        ], 'public');
+//        $this->publishes([
+//            __DIR__.'/../public/css' => public_path('vendor/anfi-debug/css'),
+//        ], 'public');
 
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/anfi-debug'),

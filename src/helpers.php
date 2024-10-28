@@ -1,9 +1,4 @@
 <?php
-namespace ANFI\DebugPackage\DebugHelper;
-
-
-use ANFI\DebugPackage\DebugHelper;
-
 /**
  * Provides a debugging function that wraps around the DebugHelper::debug method.
  *
@@ -18,7 +13,7 @@ use ANFI\DebugPackage\DebugHelper;
 if (!function_exists('_debug')) {
     function _debug(array $variables, $key = null)
     {
-        return DebugHelper::debug($variables, $key);
+        return ANFI\DebugPackage\DebugHelper::debug($variables, $key);
     }
 }
 
@@ -31,11 +26,11 @@ if (!function_exists('_debug')) {
  *
  * @param array $variables An array of variables to be debugged.
  * @param mixed $key [optional] A specific key to debug within the $variables array.
- * @return mixed The result from the DebugHelper::debug method.
+ * @return void The result from the DebugHelper::debug method.
  */
 if (!function_exists('_forget')) {
-    function _forget(string $key): bool
+    function _forget(string $key): void
     {
-        return DebugHelper::remove($key);
+        ANFI\DebugPackage\DebugHelper::remove($key);
     }
 }
