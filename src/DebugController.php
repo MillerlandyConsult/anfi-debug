@@ -11,15 +11,23 @@ class DebugController
      *
      * @param string $key The key used to retrieve variables from cache.
      */
-    public function showDebug(string $key)
+    public function showDebug()
     {
-        $variables = Cache::get($key, []);
+        $keys = request()->get('keys', '');
+        $variables = [];
+
+        if (!empty($keys)) {
+            $keysArray = explode(',', $keys);
+            foreach ($keysArray as $key) {
+                $variables[$key] = Cache::get(trim($key), []);
+            }
+        }
 
         if (request()->ajax()) {
             return view('anfi-debug::debug.partials.variables', compact('variables'))->render();
         }
 
-        return view('anfi-debug::debug.view', compact('variables', 'key'));
+        return view('anfi-debug::debug.view', compact('variables', 'keys'));
     }
 
 
