@@ -47,17 +47,17 @@
     }
 </style>
 <script>
-    setInterval(function () {
-        axios.get('{{ url("/debug/{$key}") }}', {
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        })
-            .then(function (response) {
-                console.log(response.data);
-                document.getElementById('variables-container').innerHTML = response.data;
-            });
-    }, 2000);
+    {{--setInterval(function () {--}}
+    {{--    axios.get('{{ url("/debug/{$key}") }}', {--}}
+    {{--        headers: {--}}
+    {{--            'X-Requested-With': 'XMLHttpRequest'--}}
+    {{--        }--}}
+    {{--    })--}}
+    {{--        .then(function (response) {--}}
+    {{--            console.log(response.data);--}}
+    {{--            document.getElementById('variables-container').innerHTML = response.data;--}}
+    {{--        });--}}
+    {{--}, 2000);--}}
 </script>
 </body>
 </html>
