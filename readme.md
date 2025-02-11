@@ -40,7 +40,7 @@ This package offers a custom debugging solution for Laravel applications running
 **Step 1:** Require the package using Composer.
 
 ```bash
-composer require millerlandyconsult/anfi-debug
+composer require mconsult/anfi-debug
 ```
 
 **Note:** Ensure your `composer.json` includes the repository if necessary.
