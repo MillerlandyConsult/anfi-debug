@@ -1,5 +1,5 @@
 {
-  "name": "MillerlandyConsult/anfi-debug",
+  "name": "mconsult/anfi-debug",
   "description": "A Laravel package for caching and viewing debug variables in Octane apps.",
   "type": "library",
   "autoload": {
