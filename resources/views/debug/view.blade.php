@@ -28,18 +28,18 @@
         border-radius: 8px;
     }
 
-    .variable {
+    .variable-container {
         margin-bottom: 20px;
     }
 
-    .variable h2 {
+    .key-container h2 {
         background-color: #007BFF;
         color: #fff;
         padding: 10px;
         border-radius: 4px;
     }
 
-    .variable pre {
+    .variable-container pre {
         background-color: #e9ecef;
         padding: 15px;
         border-radius: 4px;
@@ -47,17 +47,17 @@
     }
 </style>
 <script>
-    {{--setInterval(function () {--}}
-    {{--    axios.get('{{ url("/debug/{$key}") }}', {--}}
-    {{--        headers: {--}}
-    {{--            'X-Requested-With': 'XMLHttpRequest'--}}
-    {{--        }--}}
-    {{--    })--}}
-    {{--        .then(function (response) {--}}
-    {{--            console.log(response.data);--}}
-    {{--            document.getElementById('variables-container').innerHTML = response.data;--}}
-    {{--        });--}}
-    {{--}, 2000);--}}
+    // setInterval(function () {
+    //     axios.get('{{ url("/debug/{$key}") }}', {
+    //         headers: {
+    //             'X-Requested-With': 'XMLHttpRequest'
+    //         }
+    //     })
+    //         .then(function (response) {
+    //             console.log(response.data);
+    //             document.getElementById('variables-container').innerHTML = response.data;
+    //         });
+    // }, 2000);
 </script>
 </body>
 </html>

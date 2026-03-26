@@ -11,8 +11,12 @@
  * @return mixed The result from the DebugHelper::debug method.
  */
 if (!function_exists('_debug')) {
-    function _debug(array $variables, $key = null)
+    function _debug(array $variables, $key = null, bool $forget = false)
     {
+        if ($forget) {
+            _forget($key);
+        }
+
         return ANFI\DebugPackage\DebugHelper::debug($variables, $key);
     }
 }
